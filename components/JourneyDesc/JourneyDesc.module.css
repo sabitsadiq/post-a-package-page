@@ -1,0 +1,8 @@
+.img {
+  max-width: 634px;
+  height: auto;
+  border: 2px solid red;
+}
+.imgContainer {
+  border: 2px solid red;
+}

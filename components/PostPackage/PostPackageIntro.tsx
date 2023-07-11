@@ -5,17 +5,16 @@ import React from "react";
 const PostPackageIntro = () => {
   return (
     <section className="flex justify-between pt-4 w-11/12 mx-auto">
-      <div className="block">
-        {/* <Image src="/"></Image> */}
+      <div className="flex flex-col gap-1">
         <Link href="/" className="flex gap-2 items-center">
           <Image
             src="/image/leftArrowHead.png"
-            className="w-2 h-2"
+            className="w-2 h-2 opacity-50"
             width="50"
             height="50"
             alt="truck"
           />
-          <h2 className="font-bold text-sm lg:text-2xl opacity-50">Back</h2>
+          <h2 className="font-bold text-sm lg:text-lg opacity-50">Back</h2>
         </Link>
         <h1 className="font-bold text-sm lg:text-3xl">Post a package</h1>
       </div>
