@@ -44,7 +44,7 @@ const PackageSenderMain = () => {
       <div className="grid grid-rows-2 grid-flow-col gap-4 w-full md:w-11/12 mx-auto mt-6">
         <div className="col-span-2">
           <Image
-            className="w-full h-auto mx-auto object-cover"
+            className="w-full h-auto mx-auto object-contain"
             src="/image/Sender/television.png"
             width="100"
             height="100"
@@ -54,7 +54,7 @@ const PackageSenderMain = () => {
         <div className="col-span-1 w-full h-3/4 md:h-1/2 bg-[#F4F4F7] rounded-lg">
           <div className="w-1/2 flex h-full mx-auto justify-center self-center">
             <Image
-              className="w-fit flex self-center"
+              className="w-[10%] flex self-center"
               src="/image/Sender/add.png"
               width="100"
               height="100"
@@ -68,7 +68,7 @@ const PackageSenderMain = () => {
         <div className="col-span-1 w-full h-3/4 md:h-1/2 bg-[#F4F4F7] rounded-lg">
           <div className="w-1/2 flex h-full mx-auto justify-center self-center">
             <Image
-              className="w-fit flex self-center"
+              className="w-[10%] flex self-center"
               src="/image/Sender/add.png"
               width="100"
               height="100"
@@ -80,12 +80,18 @@ const PackageSenderMain = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row md:w-11/12 md:mx-auto">
+      <div className="flex flex-col md:flex-row md:w-11/12 md:mx-auto xl:-mt-40">
         <div className="w-3/4 py-4 md:py-0">
-          <h1 className="font-semibold text-xl opacity-90">Description</h1>
-          <p className="font-normal text-sm opacity-50">
-            Add a package description...
-          </p>
+          <label className="font-semibold text-xl opacity-90">
+            Description
+          </label>
+          <textarea
+            // type="comment"
+            className="bg-[#F4F4F7] px-2 w-3/4 h-24 block rounded-lg outline-none
+            border-none font-normal text-sm opacity-50"
+            placeholder=" Add a
+            package description..."
+          ></textarea>
         </div>
         <div className="w-full md:w-1/4 pb-8 xl:w-[15%] xl:ml-auto">
           <button className="bg-[#FFD700] w-full  mx-auto px-6 py-4 md:px-4 md:py-2 xl:px-4 xl:py-2 font-normal rounded-xl md:rounded-3xl md:bg-opacity-25">

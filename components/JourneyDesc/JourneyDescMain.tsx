@@ -31,7 +31,7 @@ const JourneyDescMain = () => {
       </div>
       <div className="md:w-11/12 xl:w-4/5 aspect- xl:aspect-auto mx-auto mt-6">
         <Image
-          className="w-full h-full"
+          className="w-full h-full object-fill"
           src="/image/Sender/MapsicleMap.png"
           width="100"
           height="100"
