@@ -9,7 +9,7 @@ export default function Home() {
         >
           postPackage
         </Link>
-        <Link
+        {/* <Link
           className="bg-gray-700 mt-4 opacity-50 rounded-lg px-4 flex self-center text-white py-2"
           href="/journeyDesc"
         >
@@ -17,9 +17,15 @@ export default function Home() {
         </Link>
         <Link
           className="bg-gray-700 opacity-50 rounded-lg px-4 flex self-center mt-4 text-white py-2"
-          href="/packagesenderinfo"
+          href="/packageSenderInfo"
         >
-          packagesenderinfo
+          packageSenderInfo
+        </Link> */}
+        <Link
+          className="bg-gray-700 opacity-50 rounded-lg px-4 flex self-center mt-4 text-white py-2"
+          href="/driverPage"
+        >
+          driverPage
         </Link>
       </div>
     </div>

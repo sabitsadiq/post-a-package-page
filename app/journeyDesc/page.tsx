@@ -1,9 +1,9 @@
-import JourneyDescMain from "@/components/JourneyDesc/JourneyDescMain";
+import JourneyDescMain from "../components/JourneyDesc/JourneyDescMain";
 import React from "react";
 
 const page = () => {
   return (
-    <div>
+    <div className="my-20">
       <JourneyDescMain />
     </div>
   );

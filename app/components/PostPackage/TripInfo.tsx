@@ -5,7 +5,7 @@ import { Dropdown } from "../DropMenu/CategoryDropdown";
 import { Dropdown2 } from "../DropMenu/NumberOfPackageDropdown";
 const TripInfo = () => {
   return (
-    <section className="w-11/12 mx-auto pt-8 shadow-md mt-4 rounded-xl">
+    <section className="w-11/12 lg:w-4/5 mx-auto pt-14 shadow-md my-10 border rounded-xl">
       <div className="bg-[#CCCCCC26] border-x-2 w-full bg-opacity-20">
         <h1 className=" text-[#000000] font-bold text-sm md:text-lg xl:text-2xl px-4 py-2">
           Trip information

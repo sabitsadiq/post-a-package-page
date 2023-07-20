@@ -1,4 +1,4 @@
-import PackageSenderMain from "@/components/PackageSender/PackageSenderMain";
+import PackageSenderMain from "../components/PackageSender/PackageSenderMain";
 import React from "react";
 
 const page = () => {

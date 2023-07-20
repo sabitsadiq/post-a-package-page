@@ -4,10 +4,10 @@ import Image from "next/image";
 // import style from "./journeyDesc.module.css";
 const JourneyDescMain = () => {
   return (
-    <section className="w-11/12 mx-auto">
+    <section className="w-full my-10 mx-auto">
       <Link
         href="/"
-        className="flex gap-2 items-center md:w-11/12 xl:w-4/5 md:mx-auto  mt-8"
+        className="flex gap-2 items-center md:w-11/12 xl:w-4/5 md:mx-auto  my-5"
       >
         <Image
           src="/image/leftArrowHead.png"
@@ -16,7 +16,7 @@ const JourneyDescMain = () => {
           height="50"
           alt="truck"
         />
-        <h2 className="font-bold text-sm lg:text-lg opacity-50">Back</h2>
+        <h2 className="font-normal text-sm lg:text-lg opacity-50">Back</h2>
       </Link>
       <div className="flex gap-5 md:w-11/12 xl:w-4/5  md:mx-auto">
         <h1 className="font-normal md:font-semibold text-lg md:text-xl xl:text-l">
@@ -29,24 +29,25 @@ const JourneyDescMain = () => {
           Kaduna
         </h1>
       </div>
-      <div className="md:w-11/12 xl:w-4/5 aspect- xl:aspect-auto mx-auto mt-6">
+      <div className="relative md:w-11/12 h-96 xl:my-10 xl:w-4/5 mx-auto mt-6">
         <Image
           className="w-full h-full object-fill"
           src="/image/Sender/MapsicleMap.png"
-          width="100"
-          height="100"
+          // width="100"
+          // height="100"
+          layout="fill"
           alt="desc"
         />
       </div>
-      <div className="mt-5 md:w-11/12 xl:w-4/5 md:mx-auto">
+      <div className="mt-8 md:w-11/12 xl:w-4/5 md:mx-auto">
         <h1 className="font-medium text-lg md:font-bold md:text-xl">
           Description
         </h1>
-        <p className="font-normal text-sm md:w-4/5 xl:w-3/5 md:text-xl opacity-50">
+        <p className="font-normal text-sm md:w-4/5 xl:w-3/5 md:text-lg opacity-50">
           Lorem ipsum dolor sit amet consectetur. Ultrices nisl vel tincidunt
           sed. Aliquet molestie feugiat elementum mi elementum.
         </p>
-        <div className="font-normal text-sm md:text-xl opacity-50">
+        <div className="font-normal text-sm md:text-lg opacity-50">
           <label>Delivery Date:</label>
           <input
             className="outline-none border-none bg-transparent"
@@ -63,7 +64,7 @@ const JourneyDescMain = () => {
             placeholder="Electronics"
           />
         </div>
-        <div className="md:flex justify-between ">
+        <div className="md:flex justify-between mt-7">
           <div>
             <h1 className="font-normal text-lg md:font-bold md:text-xl">
               Prices
