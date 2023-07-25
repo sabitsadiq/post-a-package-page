@@ -1,26 +1,18 @@
-export const button1 = [
+export const button = [
   {
     id: "1",
     title: "Step1",
     desc: "Vehicle information",
-    // symbol: "&rarr;",
   },
-];
-export const button2 = [
   {
     id: "2",
     title: "Step2",
     desc: "Documentation",
-    // symbol: "",
   },
-];
-
-export const button3 = [
   {
     id: "3",
     title: "Step3",
     desc: "Image upload",
-    // symbol: "&rarr",
   },
 ];
 
@@ -68,12 +60,18 @@ export const carTypeBtn = [
     id: "7",
     desc: "vehicle condition",
     placeHolder: "Fair",
-    img: "/image/la_truck-pickup.png",
+    img: "/image/tabler_number.png",
   },
   {
     id: "8",
+    desc: "Do you have certificate of road worthiness?",
+    placeHolder: "Yes",
+    img: "/image/certificate.png",
+  },
+  {
+    id: "9",
     desc: "Are your vehicle papers up-to-date?",
     placeHolder: "No",
-    img: "/image/la_truck-pickup.png",
+    img: "/image/fileIcon.png",
   },
 ];

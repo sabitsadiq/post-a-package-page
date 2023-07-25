@@ -32,7 +32,7 @@ const page = () => {
               />
             </div>
           </div>
-          <h2 className="font-semibold text-lg pt-4">Front view</h2>
+          <h2 className="font-semibold text-lg pt-4 pl-2">Front view</h2>
         </div>
         <div className="">
           <div className="bg-[#F4F4F7] rounded-2xl h-32">
@@ -46,7 +46,7 @@ const page = () => {
               />
             </div>
           </div>
-          <h2 className="font-semibold text-lg pt-4">Back view</h2>
+          <h2 className="font-semibold text-lg pt-4 pl-2">Back view</h2>
         </div>
         <div className="">
           <div className="bg-[#F4F4F7] rounded-2xl h-32">
@@ -60,7 +60,7 @@ const page = () => {
               />
             </div>
           </div>
-          <h2 className="font-semibold text-lg pt-4">interior</h2>
+          <h2 className="font-semibold text-lg pt-4 pl-2">interior</h2>
         </div>
         <div className="">
           <div className="bg-[#F4F4F7] rounded-2xl h-32">
@@ -74,7 +74,7 @@ const page = () => {
               />
             </div>
           </div>
-          <h2 className="font-semibold text-lg pt-4">interior</h2>
+          <h2 className="font-semibold text-lg pt-4 pl-2">interior</h2>
         </div>
       </div>
       <div className="w-11/12 mx-auto flex my-5 justify-end">

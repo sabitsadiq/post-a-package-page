@@ -6,7 +6,7 @@ const PostPackageIntro = () => {
   return (
     <section className="flex justify-between pt-4 w-11/12 mx-auto">
       <div className="flex flex-col gap-1">
-        <Link href="/travellerUploadImg" className="flex gap-2 items-center">
+        <Link href="/" className="flex gap-2 items-center">
           <Image
             src="/image/leftArrowHead.png"
             className="w-2 h-2 opacity-50"
