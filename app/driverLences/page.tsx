@@ -6,7 +6,7 @@ const page = () => {
   return (
     <section className="w-full mx-auto my-16">
       <Navigate title="" back="addImage" next="/" />
-      <div className="w-11/12 lg:w-3/5 mt-10 mx-auto pt-7 pb-20 rounded-xl border shadow-xl">
+      <div className="w-11/12 lg:w-3/5 mt-10 mx-auto pt-7 pb-20 rounded-3xl border shadow-lg">
         <div className="md:w-4/5 mx-auto mt-6 px-5">
           <h2 className="font-semibold text-start text-3xl w-fit md:mx-auto">
             Driver&rsquo;s license

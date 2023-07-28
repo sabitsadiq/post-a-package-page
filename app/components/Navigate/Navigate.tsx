@@ -19,9 +19,9 @@ const Navigate = (props: NavigateProps) => {
             height="50"
             alt="truck"
           />
-          <h2 className="font-bold text-sm lg:text-lg opacity-50">Back</h2>
+          <h2 className="font-semibold text-sm lg:text-lg opacity-50">Back</h2>
         </Link>
-        <h1 className="font-bold text-sm lg:text-2xl">{props.title}</h1>
+        <h1 className="font-semibold text-sm lg:text-2xl">{props.title}</h1>
       </div>
       <Link href={`/${props.next}`}>
         <button className="bg-[#FFD700] rounded-3xl bg-opacity-50 px-8 py-2">

@@ -27,7 +27,7 @@ const page = ({ items }: btnProps) => {
                 {items.desc}
               </h2>
               <div className="flex justify-between p-5 bg-[#CCCCCC26] w-full bg-opacity-20 rounded-3xl">
-                <div className="flex gap-4 items-center">
+                <div className="flex gap-1 items-center">
                   <Image
                     src={`${items.img}`}
                     className="w-4 h-4"
@@ -51,13 +51,22 @@ const page = ({ items }: btnProps) => {
         <div className="w-11/12 grid lg:grid-cols-2 xl:p-6 gap-6 lg:gap-20 mx-auto">
           <div className="w-full">
             <h2 className="text-medium font-semibold">Passport</h2>
-            <h4 className="text-xs font-medium opacity-50 my-3">
-              Image size should not be less than 5MB
-            </h4>
+            <div className="flex gap-2">
+              <Image
+                src="/image/warning.png"
+                className="w-4 h-4"
+                width="50"
+                height="50"
+                alt="truck"
+              />
+              <h4 className="text-xs opacity-50 mb-3">
+                Image size should not be less than 5MB
+              </h4>
+            </div>
             <div className="flex justify-between p-5 bg-[#CCCCCC26] w-full bg-opacity-20 rounded-3xl">
-              <div className="flex gap-4 items-center">
+              <div className="flex gap-1 items-center">
                 <Image
-                  src="/image/la_truck-pickup.png"
+                  src="/image/uploadImg.png"
                   className="w-4 h-4"
                   width="50"
                   height="50"
@@ -66,6 +75,7 @@ const page = ({ items }: btnProps) => {
                 <input
                   type="text"
                   className="opacity-50 bg-transparent outline-none border-none text-sm font-normal"
+                  placeholder="Upload image"
                 />
               </div>
             </div>
@@ -75,9 +85,9 @@ const page = ({ items }: btnProps) => {
               Certificate of road worthiness
             </h2>
             <div className="flex justify-between p-5 bg-[#CCCCCC26] w-full bg-opacity-20 rounded-3xl">
-              <div className="flex gap-4 items-center">
+              <div className="flex gap-1 items-center">
                 <Image
-                  src="/image/la_truck-pickup.png"
+                  src="/image/uploadImg.png"
                   className="w-4 h-4"
                   width="50"
                   height="50"
@@ -86,6 +96,7 @@ const page = ({ items }: btnProps) => {
                 <input
                   type="text"
                   className="opacity-50 bg-transparent outline-none border-none text-sm font-normal"
+                  placeholder="Upload image"
                 />
               </div>
             </div>

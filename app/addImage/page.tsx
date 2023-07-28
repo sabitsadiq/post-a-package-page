@@ -1,15 +1,14 @@
 import React from "react";
 import Navigate from "../components/Navigate/Navigate";
 import Image from "next/image";
-import { Caladea } from "next/font/google";
 
 const page = () => {
   return (
     <section className="w-11/12 mx-auto my-10">
       <div className="w-full mx-auto">
         <Navigate title="Add image" back="vehicleInfo" next="driverLences" />
-        <div className="w-11/12 mx-auto">
-          <p className="text-base lg:w-1/3 opacity-50">
+        <div className="w-11/12 mx-auto mt-2">
+          <p className="text-sm font-light lg:w-[30%] opacity-50">
             Add a minimum of 3 images, Your first image will be used as your
             cover.
           </p>

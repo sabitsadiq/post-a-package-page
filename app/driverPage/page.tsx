@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { button } from "../components/constants/data";
-// import { button1 } from "./constants/data";
 const driver = () => {
   return (
     <div className="w-full py-4">
@@ -35,11 +34,13 @@ const driver = () => {
             {button.map((item) => (
               <button
                 key={item.id}
-                className="rounded-full bg-opacity-50 hover:bg-opacity-100  font-semibold justify-between flex bg-[#FFD700] my-6 w-full px-3 py-4"
+                className="rounded-full text-[#000000] text-opacity-50 bg-opacity-50 hover:text-opacity-100  font-semibold justify-between flex bg-[#FFD700] my-6 w-full px-3 py-4"
               >
-                <span>{item.title}</span>
-                <span>{item.desc}</span>
-                <span className="mr-2 ">&rarr;</span>
+                <div>{item.title}</div>
+                <div className="flex gap-8">
+                  <span className="flex justify-end">{item.desc}</span>
+                  <span className="mr-2 ">&rarr;</span>
+                </div>
               </button>
             ))}
           </Link>
