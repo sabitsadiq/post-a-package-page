@@ -1,11 +1,13 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { slide } from "../components/constants/data";
+import Slider from "../components/carousel/Slider";
 const JourneyDescMain = () => {
   return (
     <section className="w-full my-10 mx-auto">
       <Link
-        href="/"
+        href="/travellerUploadImg"
         className="flex gap-2 items-center md:w-11/12 xl:w-4/5 md:mx-auto  my-5"
       >
         <Image
@@ -29,14 +31,13 @@ const JourneyDescMain = () => {
         </h1>
       </div>
       <div className="relative md:w-11/12 h-96 xl:my-10 xl:w-4/5 mx-auto mt-6">
-        <Image
+        {/* <Image
           className="w-full h-full object-fill"
           src="/image/Sender/MapsicleMap.png"
-          // width="100"
-          // height="100"
           layout="fill"
           alt="desc"
-        />
+        /> */}
+        <Slider datas={slide} />
       </div>
       <div className="mt-8 md:w-11/12 xl:w-4/5 md:mx-auto">
         <h1 className="font-medium text-lg md:font-bold md:text-xl">
@@ -76,7 +77,7 @@ const JourneyDescMain = () => {
           </div>
           <div className="w-full my-5 md:w-1/4 pb-8 xl:w-[15%] xl:ml-auto">
             <button className="bg-[#FFD700] w-full  mx-auto px-6 py-4 md:px-4 md:py-2 xl:px-4 xl:py-2 font-normal rounded-xl md:rounded-3xl">
-              Make payment
+              Connect
             </button>
           </div>
         </div>

@@ -1,3 +1,5 @@
+import { BiDotsVertical } from "react-icons/bi";
+
 export const button = [
   {
     id: "1",
@@ -73,5 +75,43 @@ export const carTypeBtn = [
     desc: "Are your vehicle papers up-to-date?",
     placeHolder: "No",
     img: "/image/fileIcon.png",
+  },
+];
+// SLIDER IMAGES
+export const slide = [
+  {
+    id: 1,
+    img: "/image/sender/MapsicleMap.png",
+    alt: "Mapsicle",
+  },
+  {
+    id: 2,
+    img: "/image/sender/television.png",
+    alt: "television",
+  },
+  {
+    id: 3,
+    img: "/image/sender/MapsicleMap.png",
+    alt: "Mapsicle",
+  },
+];
+export const tableData = [
+  {
+    location: "Abuja-lagos",
+    type: "sending package",
+    id: "WEDEJ786",
+    status: "Review",
+  },
+  {
+    location: "Abuja-lagos",
+    type: "sending package",
+    id: "WEDEJ786",
+    status: "Review",
+  },
+  {
+    location: "Abuja-lagos",
+    type: "sending package",
+    id: "WEDEJ786",
+    status: "Review",
   },
 ];
