@@ -8,21 +8,17 @@ import Link from "next/link";
 const page = () => {
   const [select, setSelect] = useState<string>();
   const [value, setValue] = useState<any>(null);
+  const options = ["Toyota", "Honda", "lexus", "Golf"];
+  const options2 = ["1", "2", "3", "4", "5", "6"];
   const handleSelect = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelect(event.target.value);
   };
-  const options = [
-    { values: "electronics", label: "electronics" },
-    { values: "travels", label: "travels" },
-    { values: "images", label: "images" },
-    { values: "healths", label: "healths" },
-  ];
-  const colorStyles = {
-    control: (styles: any) => ({
-      ...styles,
-      backgroundColor: "blue",
-    }),
+  const onOptionChangeHandler = (
+    event: React.ChangeEvent<HTMLSelectElement>
+  ) => {
+    console.log("User Selected Value - ", event.target.value);
   };
+
   return (
     <div className="w-full my-10">
       <section className="flex justify-between pt-4 w-11/12 mx-auto">
@@ -159,64 +155,45 @@ const page = () => {
             <h2 className="font-semibold text-sm md:text-lg xl:text-xl my-2">
               Category
             </h2>
-            <div className="flex  p-2 bg-[#CCCCCC26] w-full bg-opacity-20 rounded-3xl">
-              {/* <button className="bg-[#FFD700] rounded-3xl w-2/5  px-5 py-2 flex justify-between items-center gap-4"> */}
-              {/* <input
+            <div className="flex  p-5 bg-[#CCCCCC26] w-full bg-opacity-20 rounded-3xl">
+              {/* <button className="bg-[#FFD700] rounded-3xl w-2/5  px-5 py-2 flex justify-between items-center gap-4">
+                <input
                   type="text"
                   placeholder={select}
                   className="font-normal text-sm xl:text-lg w-full md:w-10/12 bg-transparent border-none outline-none text-[#000000] opacity-50"
-                /> */}
-              {/* <span className="opacity-50 text-sm font-normal">
-                Electronics 
-              </span> */}
-              {/* <Image
+                />
+                <span className="opacity-50 text-sm font-normal">
+                  Electronics
+                </span>
+                <Image
                   src="/image/iconoir_cancel.png"
                   className="w-4 h-4"
                   width="50"
                   height="50"
                   alt="cancel"
-                /> */}
-              {/* {select}
+                />
               </button> */}
-              {/* <select
-                // value={select}
-                onChange={handleSelect}
-                className={style.select}
+              {/* <button className="bg-[#FFD700] rounded-3xl w-2/5  px-5 py-2 flex justify-between items-center gap-4">
+                <span className="opacity-50 text-sm font-normal">
+                  Electronics
+                </span>
+                <Image
+                  src="/image/iconoir_cancel.png"
+                  className="w-4 h-4"
+                  width="50"
+                  height="50"
+                  alt="cancel"
+                />
+              </button> */}
+
+              <select
+                onChange={onOptionChangeHandler}
+                className="bg-transparent outline-none border-none w-full font-semibold"
               >
-                <option selected disabled></option>
-                <option>first</option>
-                <option>second</option>
-                <option>third</option>
-                <option>four</option>
-              </select> */}
-              {/* <Select
-                className="w-full outline-none bg-[#CCCCCC26] border-none"
-                options={options}
-                defaultValue={value}
-                onChange={setValue}
-                isMulti
-                styles={colorStyles}
-              /> */}
-              <div className={styles.optionCOntainer}>
-                <input type="radio" />
-                <label>electronics</label>
-              </div>
-              <div>
-                <input type="radio" />
-                <label>plastics</label>
-              </div>
-              <div>
-                <input type="radio" />
-                <label>appliances</label>
-              </div>
-              <div>
-                <input type="radio" />
-                <label>automobiles</label>
-              </div>
-              <div>
-                <input type="radio" />
-                <label>television</label>
-              </div>
+                {options.map((option, index) => {
+                  return <option key={index}>{option}</option>;
+                })}
+              </select>
             </div>
           </div>
           <div className="w-full">
@@ -232,20 +209,28 @@ const page = () => {
                   height="50"
                   alt="cancel"
                 />
-                <input
+                {/* <input
                   type="number"
                   placeholder="2"
                   className="opacity-50 bg-transparent outline-none border-none text-sm font-normal"
-                />
+                /> */}
               </div>
-              <Image
+              {/* <Image
                 src="/image/icon-park_down.png"
                 className="w-4 h-4 flex self-center"
                 width="50"
                 height="50"
                 alt="location"
-                // onClick={toggledropDown}
-              />
+                onClick={toggledropDown}
+              /> */}
+              <select
+                onChange={onOptionChangeHandler}
+                className="bg-transparent outline-none border-none w-full font-semibold"
+              >
+                {options2.map((option, index) => {
+                  return <option key={index}>{option}</option>;
+                })}
+              </select>
             </div>
           </div>
           <div className="w-full">

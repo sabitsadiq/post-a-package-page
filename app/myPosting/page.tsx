@@ -62,24 +62,21 @@ const page = () => {
     booked: "#08E06C",
   };
   const toggledropDown = (id: string) => {
-    closeModal();
     setHandleModal((prevValue) =>
       prevValue.map((obj) =>
-        obj.id === id ? { ...obj, modalOpen: !obj.modalOpen } : obj
+        obj.id === id
+          ? { ...obj, modalOpen: !obj.modalOpen }
+          : { ...obj, modalOpen: false }
       )
     );
   };
-  const closeModal = () => {
-    setHandleModal((prevValue) =>
-      prevValue.map((obj) => ({ ...obj, modalOpen: false }))
-    );
-  };
+
   useEffect(() => console.log(handleModal), [handleModal]);
   return (
     <div className="w-full p-6">
       <div className="rounded-xl px-3 py-10 shadow-md my-10 lg:w-4/5 mx-auto">
         <h1 className="px-6 font-semibold text-xl leading-6">My postings</h1>
-        <div className="overflow-x-auto">
+        <div className="">
           <table className="table-auto w-full text-[#0F0400] ">
             <thead className="text-base leading-6 font-bold">
               <tr className="border-red-600">
