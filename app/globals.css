@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.lastRow ~ * {
+  transform: translateY(-90px);
+}
+
+.mobileLastRow ~ * {
+  transform: translateY(-120px) !important;
+}
