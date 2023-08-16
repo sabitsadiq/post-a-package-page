@@ -21,12 +21,6 @@ export default function Home() {
         >
           myPosting
         </Link>
-        <Link
-          className="bg-gray-700 opacity-50 rounded-lg px-4 flex self-center mt-4 text-white py-2"
-          href="/testing"
-        >
-          testing
-        </Link>
       </div>
     </div>
   );

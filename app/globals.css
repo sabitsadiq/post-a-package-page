@@ -3,9 +3,11 @@
 @tailwind utilities;
 
 .lastRow ~ * {
-  transform: translateY(-90px);
+  transform: translateY(-120px);
 }
-
+.SecondtoLastRow ~ * {
+  transform: translateY(-50px);
+}
 .mobileLastRow ~ * {
-  transform: translateY(-120px) !important;
+  /* transform: translateY(-120px) !important; */
 }

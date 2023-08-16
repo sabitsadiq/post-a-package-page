@@ -6,10 +6,9 @@ import { tableData } from "../components/constants/data";
 import { useMediaQuery } from "@react-hook/media-query";
 
 const page = () => {
-  // const [isOpen, setIsOpen] = useState(false);
   const [handleModal, setHandleModal] = useState(tableData);
   const btnColor: any = {
-    review: "#99E918C9",
+    review: "#99E918",
     posted: "#FFD700",
     closed: "#FF5631",
     booked: "#08E06C",
@@ -27,6 +26,7 @@ const page = () => {
   const isSmallScreen = useMediaQuery("(max-width:480px)");
 
   const isLastRow = tableData.length - 1;
+  const isSecondtoLastRow = tableData.length - 2;
 
   const array = handleModal?.map((obj, index) => {
     return (
@@ -45,12 +45,14 @@ const page = () => {
             {obj.status}
           </button>
         </td>
-        <td className="flex justify-end px-6 py-2 whitespace-nowrap relative">
+        <td className="flex justify-end px-6 py-2  whitespace-nowrap relative">
           <BiDotsVertical
             size={17}
             className={`z-10 mr-5 cursor-pointer ${
               isLastRow === index ? "lastRow" : ""
-            } ${isSmallScreen && isLastRow === index ? "mobileLastRow" : ""}`}
+            } ${isSecondtoLastRow === index ? "SecondtoLastRow" : ""} ${
+              isSmallScreen && isLastRow === index ? "mobileLastRow" : ""
+            }`}
             onClick={() => toggledropDown(obj.id)}
           />
           {obj.modalOpen && <Number />}
@@ -64,10 +66,10 @@ const page = () => {
     <div className="w-full p-6">
       <div className="rounded-xl px-3 py-10 shadow-md my-10 lg:w-4/5 mx-auto">
         <h1 className="px-6 font-semibold text-xl leading-6">My postings</h1>
-        <div className={isSmallScreen ? "overflow-x-auto" : ""}>
+        <div className="overflow-x-auto">
           <table className="table-auto w-full text-[#0F0400] ">
             <thead className="text-base leading-6 font-bold">
-              <tr className="border-red-600">
+              <tr className="">
                 <th className="px-6 py-3 text-left  tracking-wider">
                   Location
                 </th>

@@ -2,7 +2,7 @@ import React from "react";
 
 const Number = () => {
   return (
-    <div className="shadow-md rounded-lg absolute top-8 right-14 cursor-pointer z-20 bg-white overflow-hidden">
+    <div className="shadow-md rounded-lg absolute w-40 top-8 right-14 cursor-pointer z-20 bg-white">
       <ul className="font-semibold text-xs pb-2 md:ml-auto flex flex-col gap-3  mt-3">
         <li className="cursor-pointer px-3 py-2 border-b z-30 flex items-center">
           Edit trip posting

@@ -3,16 +3,34 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { BsFillFolderFill } from "react-icons/bs";
+import { IoMdAddCircleOutline } from "react-icons/io";
 
 const PackageSenderMain = () => {
-  const [image, setImage] = useState<any>();
-  const [fileName, setFileName] = useState<string>("No selected file");
+  const [images, setImages] = useState<Array<string | null>>([
+    null,
+    null,
+    null,
+  ]);
+  const options = ["Electronics", "Honda", "lexus", "Golf"];
+  const onOptionChangeHandler = (
+    event: React.ChangeEvent<HTMLSelectElement>
+  ) => {
+    console.log("User Selected Value - ", event.target.value);
+  };
 
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const files = event.target.files;
-    if (files && files.length > 0) {
-      setFileName(files[0].name);
-      setImage(URL.createObjectURL(files[0]));
+  const handleImageChange = (
+    event: React.ChangeEvent<HTMLInputElement>,
+    index: number
+  ) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const newImages = [...images];
+        newImages[index] = reader.result as string;
+        setImages(newImages);
+      };
+      reader.readAsDataURL(file);
     }
   };
 
@@ -42,83 +60,69 @@ const PackageSenderMain = () => {
           </p>
         </div>
         <div className="flex gap-8 items-center justify-between">
-          <h1 className="font-normal md:font-semibold text-lg xl:text-xl 2xl-texl pt-2">
-            Electronics
-          </h1>
-          <Image
-            src="/image/icon-park_down.png"
-            className="w-4 h-4"
-            width="50"
-            height="50"
-            alt="truck"
-          />
+          <select
+            onChange={onOptionChangeHandler}
+            className="bg-transparent outline-none border-none w-full font-semibold"
+          >
+            {options.map((option, index) => {
+              return <option key={index}>{option}</option>;
+            })}
+          </select>
         </div>
       </div>
       <div className="w-full md:w-11/12 mx-auto mt-14 h-full">
         <div className="relative w-full flex flex-col mx-auto justify-center self-center  h-80 bg-[rgb(244,244,247)] rounded-3xl">
-          {image ? (
-            <form className="">
-              <label
-                htmlFor="file-input"
-                className="w-full h-full flex flex-col items-center justify-center"
-              >
-                <span className="w-full rounded-3xl flex flex-col self-center mx-auto justify-center">
-                  <Image
-                    className="w-4/5 rounded-3xl flex mx-auto items-center"
-                    src={image}
-                    fill
-                    alt={fileName}
-                  />
-                </span>
-              </label>
+          {images[0] ? (
+            <Image
+              src={images[0]}
+              alt="Front view"
+              fill
+              className="w-full h-full object-cover rounded-2xl"
+            />
+          ) : (
+            <label
+              htmlFor="image1-input"
+              className="flex flex-col items-center justify-center h-full m-auto"
+            >
+              <IoMdAddCircleOutline size={30} />
               <input
                 type="file"
-                accept="image"
-                id="file-input"
-                className="input-field cursor-pointer"
-                onChange={handleFileChange}
                 hidden
+                id="image1-input"
+                onChange={(e) => handleImageChange(e, 0)}
               />
-            </form>
-          ) : (
-            <Image
-              className="w-[3%] flex self-center"
-              src="/image/Sender/add.png"
-              width="50"
-              height="50"
-              alt="add"
-            />
+              <span className="flex items-center justify-center text-center font-normal md:font-semibold text-lg xl:text-xl 2xl-texl">
+                Front view
+              </span>
+            </label>
           )}
-          <span className="text-center font-normal md:font-semibold text-lg xl:text-xl 2xl-texl">
-            Front view
-          </span>
         </div>
         {/* UPLOADING FRONT VIEW */}
         <div className="flex flex-col md:flex-row gap-8 mt-7">
           <div className="row-span-1 w-full h-3/4 md:h-1/2 ">
             <div className="w-full flex h-48 xl:h-64 mx-auto justify-center self-center bg-[#F4F4F7] rounded-3xl">
-              <form className="">
+              {images[1] ? (
+                <Image
+                  src={images[1]}
+                  alt="Front view"
+                  width={90}
+                  height={70}
+                  className="w-full h-full object-cover rounded-2xl"
+                />
+              ) : (
                 <label
-                  htmlFor="file-input"
-                  className="w-full h-full flex flex-col items-center justify-center"
+                  htmlFor="image1-input"
+                  className="flex items-center justify-center h-full m-auto"
                 >
-                  <Image
-                    className="cursor-pointer flex self-center"
-                    src="/image/Sender/add.png"
-                    width="35"
-                    height="35"
-                    alt="add"
+                  <IoMdAddCircleOutline size={30} />
+                  <input
+                    type="file"
+                    hidden
+                    id="image1-input"
+                    onChange={(e) => handleImageChange(e, 1)}
                   />
                 </label>
-                <input
-                  type="file"
-                  accept="image"
-                  id="file-input"
-                  className="input-field cursor-pointer"
-                  onChange={handleFileChange}
-                  hidden
-                />
-              </form>
+              )}
             </div>
             <p className="font-normal md:font-semibold text-lg xl:text-xl 2xl-texl mt-5">
               Front view
@@ -127,28 +131,28 @@ const PackageSenderMain = () => {
           {/* UPLOADING BACK VIEW */}
           <div className="row-span-1 w-full h-3/4 md:h-1/2">
             <div className="w-full h-48 xl:h-64 bg-[#F4F4F7] rounded-3xl flex  mx-auto justify-center self-center">
-              <form className="">
+              {images[2] ? (
+                <Image
+                  src={images[2]}
+                  alt="Front view"
+                  width={90}
+                  height={70}
+                  className="w-full h-full object-cover rounded-2xl"
+                />
+              ) : (
                 <label
-                  htmlFor="file-input"
-                  className="w-full h-full flex flex-col items-center justify-center"
+                  htmlFor="image2-input"
+                  className="flex items-center justify-center h-full m-auto"
                 >
-                  <Image
-                    className="cursor-pointer flex self-center"
-                    src="/image/Sender/add.png"
-                    width="35"
-                    height="35"
-                    alt="add"
+                  <IoMdAddCircleOutline size={30} />
+                  <input
+                    type="file"
+                    hidden
+                    id="image2-input"
+                    onChange={(e) => handleImageChange(e, 2)}
                   />
                 </label>
-                <input
-                  type="file"
-                  accept="image"
-                  id="file-input"
-                  className="input-field cursor-pointer"
-                  onChange={handleFileChange}
-                  hidden
-                />
-              </form>
+              )}
             </div>
             <p className="font-normal md:font-semibold text-lg xl:text-xl mt-5">
               Back view
